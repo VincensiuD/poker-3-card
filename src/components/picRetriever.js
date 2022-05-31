@@ -1,4 +1,3 @@
-import React,  { useState, useEffect } from "react";
 import C2 from "../image/2Club.png";
 import D2 from "../image/2Diamond.png";
 import H2 from "../image/2Heart.png";
@@ -52,65 +51,68 @@ import DA from "../image/ADiamond.png";
 import HA from "../image/AHeart.png";
 import SA from "../image/ASpade.png";
 
-export const cardImages = {
-  1:  C2,
-  2:  D2,
-  3:  H2,
-  4:  S2,
-  5:  C3,
-  6:  D3,
-  7: H3,
-   8: S3,
-   9: C4,
-   10: D4,
-   11: H4,
-   12: S4,
-   13: C5,
-   14: D5,
-    15:H5,
-   16: S5,
-    17:C6,
-    18: D6,
-    19: H6,
-    20:S6,
-    21:C7,
-    22:D7,
-    23:H7,
-    24:S7,
-    25:C8,
-    26:D8,
-    27:H8,
-    28:S8,
-    29:C9,
-    30:D9,
-    31:H9,
-    32:S9,
-    33:CT,
-    34:DT,
-    35:HT,
-    36:ST,
-    37:CJ,
-    38:DJ,
-    39:HJ,
-    40:SJ,
-    41:CQ,
-    42:DQ,
-    43:HQ,
-    44:SQ,
-    45:CK,
-    46:DK,
-    47:HK,
-    48:SK,
-    49:CA,
-    50:DA,
-    51:HA,
-    52:SA,
-  }
+export const cardDictionary = {
+  C2: {image:C2, rank:1, suit:"C"}, 
+  1: {image:C2, rank:2, suit:"C"},
+2: {image:S2, rank:2, suit:"S"},
+3: {image:D2, rank:2, suit:"D"},
+4: {image:H2, rank:2, suit:"H"},
+5: {image:C3, rank:3, suit:"C"},
+6: {image:S3, rank:3, suit:"S"},
+7: {image:D3, rank:3, suit:"D"},
+8: {image:H3, rank:3, suit:"H"},
+9: {image:C4, rank:4, suit:"C"},
+10: {image:S4, rank:4, suit:"S"},
+11: {image:D4, rank:4, suit:"D"},
+12: {image:H4, rank:4, suit:"H"},
+13: {image:C5, rank:5, suit:"C"},
+14: {image:S5, rank:5, suit:"S"},
+15: {image:D5, rank:5, suit:"D"},
+16: {image:H5, rank:5, suit:"H"},
+17: {image:C6, rank:6, suit:"C"},
+18: {image:S6, rank:6, suit:"S"},
+19: {image:D6, rank:6, suit:"D"},
+20: {image:H6, rank:6, suit:"H"},
+21: {image:C7, rank:7, suit:"C"},
+22: {image:S7, rank:7, suit:"S"},
+23: {image:D7, rank:7, suit:"D"},
+24: {image:H7, rank:7, suit:"H"},
+25: {image:C8, rank:8, suit:"C"},
+26: {image:S8, rank:8, suit:"S"},
+27: {image:D8, rank:8, suit:"D"},
+28: {image:H8, rank:8, suit:"H"},
+29: {image:C9, rank:9, suit:"C"},
+30: {image:S9, rank:9, suit:"S"},
+31: {image:D9, rank:9, suit:"D"},
+32: {image:H9, rank:9, suit:"H"},
+33: {image:CT, rank:10, suit:"C"},
+34: {image:ST, rank:10, suit:"S"},
+35: {image:DT, rank:10, suit:"D"},
+36: {image:HT, rank:10, suit:"H"},
+37: {image:CJ, rank:11, suit:"C"},
+38: {image:SJ, rank:11, suit:"S"},
+39: {image:DJ, rank:11, suit:"D"},
+40: {image:HJ, rank:11, suit:"H"},
+41: {image:CQ, rank:12, suit:"C"},
+42: {image:SQ, rank:12, suit:"S"},
+43: {image:DQ, rank:12, suit:"D"},
+44: {image:HQ, rank:12, suit:"H"},
+45: {image:CK, rank:13, suit:"C"},
+46: {image:SK, rank:13, suit:"S"},
+47: {image:DK, rank:13, suit:"D"},
+48: {image:HK, rank:13, suit:"H"},
+49: {image:CA, rank:14, suit:"C"},
+50: {image:SA, rank:14, suit:"S"},
+51: {image:DA, rank:14, suit:"D"},
+52: {image:HA, rank:14, suit:"H"},
+};
 
-export function generateImage(cardName)
-{
+export function generateImage(cardNumber) {
 
-    return(   
-    cardImages[cardName]
-    );
+  let cardCode = (cardDictionary[cardNumber]);
+
+
+  return  cardCode.image;
 }
+
+
